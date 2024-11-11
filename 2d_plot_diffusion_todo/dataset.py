@@ -73,6 +73,7 @@ class TwoDimDataClass(Dataset):
     def __init__(self, dataset_type: str, N: int, batch_size: int, dimension=2):
 
         self.X = load_twodim(N, dataset_type, dimension=dimension)
+        # self.X = (self.X - self.X.mean(dim=0)) / self.X.std(dim=0)
         self.name = dataset_type
         self.batch_size = batch_size
         self.dimension = 2

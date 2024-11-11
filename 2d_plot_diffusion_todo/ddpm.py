@@ -95,7 +95,7 @@ class DiffusionModule(nn.Module):
     
 
     @torch.no_grad()
-    def p_sample(self, xt, t):
+    def p_sample_correct(self, xt, t):
         """
         One step denoising function of DDPM: x_t -> x_{t-1}.
 
@@ -135,7 +135,7 @@ class DiffusionModule(nn.Module):
         return x_t_prev
 
     @torch.no_grad()
-    def p_sample_v2(self, xt, t):
+    def p_sample(self, xt, t):
         """
         One step denoising function of DDPM: x_t -> x_{t-1}.
 

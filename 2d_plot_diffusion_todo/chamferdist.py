@@ -9,4 +9,5 @@ def chamfer_distance(S1, S2) -> float:
     dist = cdist(S1, S2)
     dist1 = dist.min(axis=1) ** 2
     dist2 = dist.min(axis=0) ** 2
-    return dist1.sum() + dist2.sum()
+    # return dist1.sum() + dist2.sum()
+    return dist1.mean() + dist2.mean()
